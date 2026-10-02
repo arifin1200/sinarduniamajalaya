@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinar Dunia Printing - Percetakan Offset & Media Promosi</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- TOP BAR INFO -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex flex-wrap justify-center sm:justify-start items-center gap-4">
+                <span><i class="fas fa-map-marker-alt text-cyan-400 mr-1.5"></i> Sinar Dunia Printing, Majalaya, Kab. Bandung</span>
+                <span class="hidden md:inline"><i class="fas fa-envelope text-cyan-400 mr-1.5"></i> cs@sinarduniaprinting.com</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-emerald-400 font-semibold flex items-center gap-1">
+                    <i class="fab fa-whatsapp"></i> Admin 1: 0822-1113-7688
+                </span>
+                <span class="text-cyan-400 font-semibold flex items-center gap-1">
+                    <i class="fab fa-whatsapp"></i> Admin 2: 0822-1113-7588
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR UTAMA -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <picture class="h-12 w-12 flex items-center justify-center overflow-hidden rounded-lg border border-slate-300 bg-black shadow-inner">
+                    <source srcset="logo.png" type="image/png">
+                    <source srcset="logo.jpeg" type="image/jpeg">
+                    <img src="logo.jpg" alt="Logo Sinar Dunia" class="h-full w-full object-contain p-0.5" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=150&q=80';">
+                </picture>
+                <div>
+                    <h1 class="text-base sm:text-lg font-extrabold tracking-tight text-slate-900 leading-tight">SINAR DUNIA</h1>
+                    <p class="text-[10px] sm:text-xs text-red-600 font-bold tracking-widest uppercase">Printing & Graphic Designer</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                <a href="#produk" class="hover:text-blue-600 transition">Produk & Layanan</a>
+                <a href="#mengapa-kami" class="hover:text-blue-600 transition">Mengapa Kami</a>
+                <a href="#kontak" class="hover:text-blue-600 transition">Kontak</a>
+            </nav>
+            <button onclick="openAdminSelectorModal('Konsultasi & Pesan Cetak')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-2.5 rounded-lg font-bold text-sm flex items-center shadow-md transition transform hover:scale-105">
+                <i class="fab fa-whatsapp mr-2 text-lg"></i> Konsultasi & Pesan
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white py-16 lg:py-24 px-4 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <div class="mb-8 flex justify-center">
+                <div class="p-3 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl inline-block">
+                    <img src="logo.jpg" alt="Logo Sinar Dunia Printing" class="max-h-36 sm:max-h-44 w-auto rounded-xl object-contain" onerror="this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=300&q=80';">
+                </div>
+            </div>
+            <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 text-xs font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wider mb-6 inline-block">
+                Mitra Strategis Untuk Kebutuhan Cetak & Media Promosi
+            </span>
+            <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Pesan Online, Duduk Manis <br class="hidden sm:inline">Biar Kami yang Antar Sampai Depan Pintu
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto leading-relaxed">
+                Fokus kami bukan sekadar mencetak, tetapi membantu bisnis, instansi, dan personal mendapatkan media promosi yang tepat sasaran, konsisten secara visual, dan berkualitas tinggi.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#produk" class="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition">Lihat Katalog Produk</a>
+                <button onclick="openAdminSelectorModal('Kirim File Desain')" class="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-emerald-400 text-xl"></i>
+                    <span>Kirim File via WhatsApp</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION INFO PENGIRIMAN -->
+    <section class="bg-white border-b border-slate-200 py-8 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+            <div class="flex items-center gap-4 justify-center md:justify-start p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl shrink-0"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm">Pesan Secara Online</h4>
+                    <p class="text-xs text-slate-500">Cukup kirim desain online, langsung diproses</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 justify-center md:justify-start p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl shrink-0"><i class="fas fa-shipping-fast"></i></div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm">Kirim Seluruh Indonesia</h4>
+                    <p class="text-xs text-slate-500">Pesanan diantar aman sampai depan pintu</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 justify-center md:justify-start p-4 rounded-xl bg-slate-50 border border-slate-100">
+                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0"><i class="fas fa-headset"></i></div>
+                <div>
+                    <h4 class="font-bold text-slate-900 text-sm">Konsultasi Gratis</h4>
+                    <p class="text-xs text-slate-500">Bantu pilih bahan & finishing terbaik</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DAFTAR PRODUK DENGAN FOTO (12 KATALOG) -->
+    <section id="produk" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <span class="text-blue-600 font-bold text-xs tracking-widest uppercase mb-2 block">KATALOG PERCETAKAN OFFSET & DIGITAL</span>
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-3">Pilihan Produk & Layanan Cetak</h3>
+            <p class="text-slate-600 max-w-xl mx-auto text-sm">Solusi cetak praktis untuk hemat waktu dan tenaga. Pilih produk yang Anda butuhkan di bawah ini.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <!-- 1. Print HVS A3 -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&w=600&q=80" alt="Print HVS A3" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Cetak Dokumen</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Print HVS A3</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Cetak dokumen, materi, atau bagan ukuran besar dengan hasil tajam dan jelas.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Print HVS A3')" class="w-full block bg-slate-100 group-hover:bg-blue-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 2. Print Art Paper -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" alt="Art Paper" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-slate-900/80 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Brosur / Poster</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Print Art Paper 260/160 GSM</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Kertas licin semi-glossy berkualitas tinggi untuk brosur, poster, dan katalog.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Print Art Paper')" class="w-full block bg-slate-100 group-hover:bg-blue-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 3. Stiker Cromo -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1572375579244-3e9c8f9b9049?auto=format&fit=crop&w=600&q=80" alt="Stiker Cromo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-yellow-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Label Produk</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Stiker Cromo</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Stiker kertas ekonomis untuk label kemasan makanan, botol, dan dus produk.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Stiker Cromo')" class="w-full block bg-slate-100 group-hover:bg-yellow-500 group-hover:text-slate-950 text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 4. Stiker Vinil -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=600&q=80" alt="Stiker Vinyl" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-emerald-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Anti Air / Outdoor</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Stiker Vinil (Vinyl)</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Stiker plastik elastis tahan air, tidak mudah robek, sangat awet untuk produk luar ruangan.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Stiker Vinil')" class="w-full block bg-slate-100 group-hover:bg-emerald-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 5. Stiker Transparan -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=600&q=80" alt="Stiker Transparan" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-indigo-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Label Estetik</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Stiker Transparan</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Stiker bening tembus pandang untuk botol kaca, jar, dan kemasan kosmetik.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Stiker Transparan')" class="w-full block bg-slate-100 group-hover:bg-indigo-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 6. Kertas Kalkir A3 -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Kertas Kalkir" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-purple-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Teknik & Sablon</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Kertas Kalkir A3</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Kertas tembus pandang untuk arsitektur, gambar teknik, dan cetak film sablon.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Kertas Kalkir A3')" class="w-full block bg-slate-100 group-hover:bg-purple-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 7. Kartu Nama -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Kartu Nama" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Identitas Bisnis</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Kartu Nama</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Cetak kartu nama profesional dengan pilihan kertas tebal dan finishing elegan.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Kartu Nama')" class="w-full block bg-slate-100 group-hover:bg-blue-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 8. ID CARD -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df5c920aac9?auto=format&fit=crop&w=600&q=80" alt="ID Card" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-blue-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Kartu Pegawai</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">ID CARD</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Cetak kartu PVC tebal standar ATM untuk pegawai, panitia, atau anggota sekolah.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('ID CARD')" class="w-full block bg-slate-100 group-hover:bg-blue-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 9. Stempel Flash -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Stempel Flash" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-yellow-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Stempel Otomatis</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Stempel Flash</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Stempel otomatis tanpa bantalan luar (bisa diisi ulang), praktis untuk perusahaan.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Stempel Flash')" class="w-full block bg-slate-100 group-hover:bg-yellow-500 group-hover:text-slate-950 text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 10. Lanyard -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=600&q=80" alt="Lanyard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-emerald-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Tali ID Card</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Lanyard (1 Muka & Bolak Balik)</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Cetak tali id card printing sublimasi penuh warna untuk perusahaan dan event.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Lanyard')" class="w-full block bg-slate-100 group-hover:bg-emerald-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 11. Spanduk / X-Banner -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=600&q=80" alt="Spanduk Banner" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-red-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Media Promosi</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Spanduk / X-Banner</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Cetak spanduk toko atau X-banner portabel promosi usaha anti luntur.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Spanduk / X-Banner')" class="w-full block bg-slate-100 group-hover:bg-red-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+            <!-- 12. Plakat Penghargaan -->
+            <div class="bg-white border border-slate-200 hover:border-blue-400 rounded-2xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+                <div>
+                    <div class="h-40 overflow-hidden relative bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" alt="Plakat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <span class="absolute bottom-2 left-2 bg-amber-600/90 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-md">Kenang-kenangan</span>
+                    </div>
+                    <div class="p-5">
+                        <h4 class="text-base font-bold text-slate-900 mb-1">Plakat Penghargaan</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">Plakat akrilik atau fiberglass elegan untuk KKN, wisuda, dan kantor.</p>
+                    </div>
+                </div>
+                <div class="p-5 pt-0">
+                    <button onclick="openAdminSelectorModal('Plakat Penghargaan')" class="w-full block bg-slate-100 group-hover:bg-amber-600 group-hover:text-white text-slate-800 font-semibold py-2.5 rounded-xl text-center text-xs transition-colors">Pesan via WhatsApp</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION MENGAPA KAMI -->
+    <section id="mengapa-kami" class="bg-white border-y border-slate-200 py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold text-xs tracking-widest uppercase mb-2 block">KEUNGGULAN KAMI</span>
+                <h3 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-3">Mengapa Memilih Sinar Dunia?</h3>
+                <p class="text-slate-600 max-w-xl mx-auto text-sm">Kepercayaan bukan dicetak — tapi dibangun, dijaga, dan dibuktikan.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-paint-brush"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">Desain Dibantu</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Belum punya desain? Tim desainer profesional kami siap membantu mewujudkan ide Anda.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-comments"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">Online Support</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Hubungi customer service kami kapanpun jika ada pertanyaan atau kendala pesanan.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-tags"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">Harga Kompetitif</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Kami menyarankan harga yang optimal dan bersaing sesuai dengan kebutuhan budget Anda.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 text-center">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4"><i class="fas fa-box"></i></div>
+                    <h4 class="font-bold text-slate-900 text-base mb-2">Kirim ke Seluruh Indonesia</h4>
+                    <p class="text-slate-600 text-xs leading-relaxed">Pesanan dikirim aman menggunakan ekspedisi terpercaya langsung ke tempat Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="kontak" class="bg-slate-900 text-slate-400 py-12 px-4 text-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8 mb-8">
+            <div class="flex items-center space-x-3">
+                <img src="logo.jpg" alt="Logo" class="h-10 w-auto rounded object-contain bg-black p-0.5" onerror="this.src='https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=150&q=80';">
+                <span class="font-bold text-white text-base">Sinar Dunia Printing & Graphic Designer</span>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6 text-xs font-semibold">
+                <a href="#beranda" class="hover:text-white transition">Beranda</a>
+                <a href="#produk" class="hover:text-white transition">Produk</a>
+                <a href="#mengapa-kami" class="hover:text-white transition">Mengapa Kami</a>
+                <button onclick="openAdminSelectorModal('Pertanyaan / Konsultasi')" class="hover:text-emerald-400 transition text-emerald-400"><i class="fab fa-whatsapp mr-1"></i> Hubungi WhatsApp CS</button>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center text-xs text-slate-500 space-y-1">
+            <p>&copy; 2026 Sinar Dunia Printing. All rights reserved. Solusi cetak praktis, hemat waktu dan tenaga.</p>
+            <p class="text-[11px] text-slate-600">No. Kontak WhatsApp CS: 0822-1113-7688 / 0822-1113-7588</p>
+        </div>
+    </footer>
+
+    <!-- MODAL SELECTOR ADMIN WHATSAPP -->
+    <div id="admin-selector-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div id="admin-modal-box" class="bg-white border border-slate-200 w-full max-w-md rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+                <div class="flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-emerald-600 text-2xl"></i>
+                    <h3 class="font-extrabold text-slate-900 text-base">Pilih Admin WhatsApp</h3>
+                </div>
+                <button onclick="closeAdminSelectorModal()" class="text-slate-400 hover:text-slate-700 p-1.5 rounded-lg hover:bg-slate-200 transition">
+                    <i class="fas fa-times text-lg"></i>
+                </button>
+            </div>
+            <div class="p-6 space-y-4">
+                <p class="text-xs text-slate-600 text-center leading-relaxed">
+                    Silakan pilih salah satu admin WhatsApp aktif untuk melanjutkan order atau konsultasi mengenai <span id="modal-product-name" class="font-bold text-slate-900">Produk</span>:
+                </p>
+
+                <div class="space-y-3 pt-1">
+                    <!-- Admin 1 Button -->
+                    <a id="btn-admin-1" href="#" target="_blank" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white p-4 rounded-xl font-bold flex items-center justify-between transition shadow-md group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500/30 flex items-center justify-center text-xl shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-extrabold">Admin 1 (Sinar Dunia)</div>
+                                <div class="text-xs text-emerald-100 font-normal">0822-1113-7688</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-sm text-emerald-200 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+
+                    <!-- Admin 2 Button -->
+                    <a id="btn-admin-2" href="#" target="_blank" class="w-full bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl font-bold flex items-center justify-between transition shadow-md group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-blue-500/30 flex items-center justify-center text-xl shrink-0">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="text-left">
+                                <div class="text-sm font-extrabold">Admin 2 (Sinar Dunia)</div>
+                                <div class="text-xs text-blue-100 font-normal">0822-1113-7588</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-right text-sm text-blue-200 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="pt-2 text-center">
+                    <button onclick="closeAdminSelectorModal()" class="text-xs text-slate-400 hover:text-slate-600 font-semibold underline">
+                        Batal
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT UNTUK MODAL LOGIC -->
+    <script>
+        const adminModal = document.getElementById('admin-selector-modal');
+        const adminModalBox = document.getElementById('admin-modal-box');
+        const productNameSpan = document.getElementById('modal-product-name');
+        const btnAdmin1 = document.getElementById('btn-admin-1');
+        const btnAdmin2 = document.getElementById('btn-admin-2');
+
+        function openAdminSelectorModal(itemTitle) {
+            const product = itemTitle || 'Layanan Percetakan';
+            productNameSpan.textContent = `"${product}"`;
+
+            const messageText = `Halo Sinar Dunia Printing, saya ingin memesan / berkonsultasi mengenai ${product}.`;
+            const encodedText = encodeURIComponent(messageText);
+
+            btnAdmin1.href = `https://wa.me/6282211137688?text=${encodedText}`;
+            btnAdmin2.href = `https://wa.me/6282211137588?text=${encodedText}`;
+
+            adminModal.classList.remove('hidden');
+            setTimeout(() => {
+                adminModal.classList.remove('opacity-0');
+                adminModalBox.classList.remove('scale-95');
+                adminModalBox.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeAdminSelectorModal() {
+            adminModal.classList.add('opacity-0');
+            adminModalBox.classList.remove('scale-100');
+            adminModalBox.classList.add('scale-95');
+            setTimeout(() => {
+                adminModal.classList.add('hidden');
+            }, 300);
+        }
+
+        adminModal.addEventListener('click', (e) => {
+            if (e.target === adminModal) {
+                closeAdminSelectorModal();
+            }
+        });
+    </script>
+</body>
+</html>
